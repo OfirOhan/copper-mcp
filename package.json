@@ -1,0 +1,40 @@
+{
+  "name": "copper-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Copper CRM: let Claude, Cursor and other AI agents search contacts and deals, review the pipeline, update stages, and log notes and tasks.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "copper",
+    "copper-crm",
+    "crm",
+    "sales",
+    "ai-agents",
+    "claude"
+  ],
+  "type": "module",
+  "bin": {
+    "copper-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "npm run build && node --test test/client.test.mjs test/stdio.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.17.5",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "typescript": "5.6.3"
+  },
+  "license": "MIT"
+}
